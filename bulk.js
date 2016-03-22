@@ -14,8 +14,8 @@ function Bulk(scope, opts) {
       source = src;
     },
     mark: function(item_uuid, event) {
-      if (isSelectedAll) {
-        isSelectedAll = false;
+      if (selected.indexOf(item_uuid) > -1) {
+        return;
       }
 
       selected.push(item_uuid);

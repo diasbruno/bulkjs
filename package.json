@@ -1,0 +1,23 @@
+{
+  "name": "bulk",
+  "version": "0.1.1",
+  "description": "manager for multiple selection.",
+  "main": "bulk.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/diasbruno/bulkjs.git"
+  },
+  "keywords": [
+    "inputs",
+    "manager"
+  ],
+  "author": "Bruno Dias",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/diasbruno/bulkjs/issues"
+  },
+  "homepage": "https://github.com/diasbruno/bulkjs#readme"
+}

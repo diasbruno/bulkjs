@@ -1,5 +1,5 @@
 {
-  "name": "bulk",
+  "name": "bulkjs",
   "version": "0.1.1",
   "description": "manager for multiple selection.",
   "main": "bulk.js",

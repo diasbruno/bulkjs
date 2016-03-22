@@ -93,6 +93,13 @@
          scope.bulkAction = bulkAction;
          scope.collection = collection;
 
+         var k = setInterval(function() {
+             if (bulkAction.all()) {
+                 return;
+             }
+             bulkAction.mark(parseInt(Math.random() * 4) + 1);
+         }, 1000);
+
          // default value.
          sl.html("none");
 

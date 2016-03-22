@@ -20,28 +20,28 @@ function Bulk(scope, opts) {
       selected.push(item_uuid);
 
       if (opts.update) {
-        opts.update(scope, event, 'mark');
+        opts.update(scope, event, "mark");
       }
     },
     unmark: function(filter, event) {
       selected = selected.filter(filter);
 
       if (opts.update) {
-        opts.update(scope, event, 'unmark');
+        opts.update(scope, event, "unmark");
       }
     },
     markAll: function(event) {
       selected = source.map(opts.toId);
 
       if (opts.update) {
-        opts.update(scope, event, 'markAll');
+        opts.update(scope, event, "markAll");
       }
     },
     cleanAll: function(event) {
       selected = [];
 
       if (opts.update) {
-        opts.update(scope, event, 'cleanAll');
+        opts.update(scope, event, "cleanAll");
       }
     },
     toogleMark: function(item_uuid, event) {
@@ -59,7 +59,7 @@ function Bulk(scope, opts) {
       if (!this.all()) {
         this.markAll(event, "markAll");
       } else {
-        this.cleanAll(event, 'cleanAll');
+        this.cleanAll(event, "cleanAll");
       }
     },
     list: function() {

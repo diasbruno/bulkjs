@@ -1,0 +1,23 @@
+{
+    "env": {
+        "browser": true,
+        "node": true
+    },
+    "extends": "eslint:recommended",
+    "rules": {
+        "comma-dangle": 0,
+        "no-console": 1,
+        "no-debugger": 1,
+        "eol-last": 0,
+        "no-unused-vars": 2,
+        "no-underscore-dangle": 2,
+        "indent": ["error", 2],
+        "one-var": [2, "never"],
+        "array-bracket-spacing": [2, "never"],
+        "padded-blocks": [2, "never"],
+        "no-param-reassign": [2, {"props": true}],
+        "linebreak-style": ["error", "unix"],
+        "quotes": ["error", "double"],
+        "semi": ["error", "always"]
+    }
+}

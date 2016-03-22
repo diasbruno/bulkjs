@@ -1,6 +1,6 @@
 {
   "name": "bulkjs",
-  "version": "0.1.1",
+  "version": "0.1.4",
   "description": "manager for multiple selection.",
   "main": "bulk.js",
   "scripts": {

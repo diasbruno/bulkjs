@@ -5,7 +5,6 @@ function Bulk(scope, opts) {
     return new Bulk(scope, opts);
   }
 
-  var isSelectedAll = false;
   var selected = [];
   var source = [];
 
@@ -20,24 +19,18 @@ function Bulk(scope, opts) {
 
       selected.push(item_uuid);
 
-      if (source.length == selected.length) {
-        isSelectedAll = true;
-      }
-
       if (opts.update) {
         opts.update(scope, event, 'mark');
       }
     },
     unmark: function(filter, event) {
       selected = selected.filter(filter);
-      isSelectedAll = false;
 
       if (opts.update) {
         opts.update(scope, event, 'unmark');
       }
     },
     markAll: function(event) {
-      isSelectedAll = true;
       selected = source.map(opts.toId);
 
       if (opts.update) {
@@ -45,7 +38,6 @@ function Bulk(scope, opts) {
       }
     },
     cleanAll: function(event) {
-      isSelectedAll = false;
       selected = [];
 
       if (opts.update) {
@@ -64,8 +56,8 @@ function Bulk(scope, opts) {
       }
     },
     toogleAll: function(event) {
-      if (!isSelectedAll) {
-        this.markAll(event, 'markAll');
+      if (!this.all()) {
+        this.markAll(event, "markAll");
       } else {
         this.cleanAll(event, 'cleanAll');
       }
@@ -77,7 +69,7 @@ function Bulk(scope, opts) {
       return selected.indexOf(item) > -1;
     },
     all: function() {
-      return isSelectedAll;
+      return source.length == selected.length;
     },
     count: function() {
       return selected.length;

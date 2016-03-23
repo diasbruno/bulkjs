@@ -1,3 +1,4 @@
+var should = require("should");
 var Bulk = require("../bulk.js");
 
 var data = [

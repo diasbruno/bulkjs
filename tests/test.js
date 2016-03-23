@@ -32,4 +32,15 @@ describe("Bulk", function() {
     });
     bulk.list().should.be.eql([]);
   });
+
+  it("#markAll()", function() {
+    var bulk = Bulk({}, {
+      toId: function(x) {
+        return x.uuid;
+      }
+    });
+    bulk.dataSource(data);
+    bulk.markAll();
+    bulk.list().should.be.eql([1,2,3,4,5]);
+  });
 });

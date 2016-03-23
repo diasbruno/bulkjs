@@ -19,4 +19,17 @@ describe("Bulk", function() {
     bulk.mark(1);
     bulk.list().should.be.eql([1]);
   });
+
+  it("#unmark(uuid)", function() {
+    var bulk = Bulk({}, {
+      toId: function(x) {
+        return x.uuid;
+      }
+    });
+    bulk.mark(1);
+    bulk.unmark(function(x) {
+      return x != 1;
+    });
+    bulk.list().should.be.eql([]);
+  });
 });

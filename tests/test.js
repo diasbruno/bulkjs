@@ -55,4 +55,17 @@ describe("Bulk", function() {
     bulk.cleanAll();
     bulk.list().should.be.eql([]);
   });
+
+  it("#toggleAll()", function() {
+    var bulk = Bulk({}, {
+      toId: function(x) {
+        return x.uuid;
+      }
+    });
+    bulk.dataSource(data);
+    bulk.toogleAll();
+    bulk.list().should.be.eql([1,2,3,4,5]);
+    bulk.toogleAll();
+    bulk.list().should.be.eql([]);
+  });
 });

@@ -4,7 +4,7 @@
   "description": "manager for multiple selection.",
   "main": "bulk.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha ./tests/test.js -w"
   },
   "repository": {
     "type": "git",
@@ -19,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/diasbruno/bulkjs/issues"
   },
-  "homepage": "https://github.com/diasbruno/bulkjs#readme"
+  "homepage": "https://github.com/diasbruno/bulkjs#readme",
+  "devDependencies": {
+    "mocha": "^2.4.5",
+    "should": "^8.2.2"
+  }
 }

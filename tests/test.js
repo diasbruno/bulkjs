@@ -43,4 +43,16 @@ describe("Bulk", function() {
     bulk.markAll();
     bulk.list().should.be.eql([1,2,3,4,5]);
   });
+
+  it("#cleanAll()", function() {
+    var bulk = Bulk({}, {
+      toId: function(x) {
+        return x.uuid;
+      }
+    });
+    bulk.dataSource(data);
+    bulk.markAll();
+    bulk.cleanAll();
+    bulk.list().should.be.eql([]);
+  });
 });

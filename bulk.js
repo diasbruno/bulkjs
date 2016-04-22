@@ -62,7 +62,14 @@ function Bulk(scope, opts) {
         this.cleanAll(event, "cleanAll");
       }
     },
-    list: function() {
+    list: function(items_uuids) {
+      if (items_uuids) {
+        selected = items_uuids;
+
+        if (opts.update) {
+          opts.update(scope, null, 'mark');
+        }
+      }
       return selected;
     },
     isSelected: function(item) {

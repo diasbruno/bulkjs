@@ -56,6 +56,8 @@ $(function() {
   scope.bulkAction = bulkAction;
   scope.collection = collection;
 
+  bulkAction.list([1, 2, 3]);
+
   var k = setInterval(function() {
     if (bulkAction.all()) {
       return;

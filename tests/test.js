@@ -56,6 +56,14 @@ describe("Bulk", function() {
     bulk.list().should.be.eql([]);
   });
 
+  it("#list()", function() {
+    var bulk = Bulk({}, {
+      update: function() {}
+    });
+    bulk.list([1, 2, 3]);
+    bulk.list().should.be.eql([1, 2, 3]);
+  });
+
   it("#toggleAll()", function() {
     var bulk = Bulk({}, {
       toId: function(x) {
